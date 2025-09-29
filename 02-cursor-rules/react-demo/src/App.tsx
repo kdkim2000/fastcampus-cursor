@@ -3,6 +3,7 @@ import WithRules from './with-rules/pages'
 import WithoutRules from './without-rules/pages'
 import ProductDetail from './without-rules/pages/product-detail'
 import ProductDetailWithRules from './with-rules/pages/product-detail'
+import { Toaster } from '@/components/ui/toaster'
 import './App.css'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/without-rules/product-detail" element={<ProductDetail />} />
         <Route path="/" element={<div>Select a page from the navigation</div>} />
       </Routes>
+      <Toaster />
     </div>
   )
 }

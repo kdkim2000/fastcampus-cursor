@@ -1,0 +1,198 @@
+---
+description: Product Detail UI 컴포넌트 개발 가이드라인
+alwaysApply: true
+---
+
+# Product Detail UI 컴포넌트 개발 가이드라인
+
+## 컴포넌트 구조 원칙
+
+### 1. TypeScript 인터페이스 정의
+```typescript
+interface ComponentNameProps {
+  product: Product;
+  // 추가 props는 엄격하게 타이핑
+}
+```
+
+### 2. React.FC 패턴 사용
+```typescript
+const ComponentName: React.FC<ComponentNameProps> = ({ product }) => {
+  // 컴포넌트 로직
+};
+```
+
+### 3. Export 패턴
+```typescript
+export default ComponentName;
+```
+
+## UI 컴포넌트 사용 패턴
+
+### shadcn/ui 컴포넌트 우선 사용
+- **Button**: 액션 버튼, 수량 조절, 폼 제출
+- **Badge**: 상태 표시 (할인율, 재고 상태, 구매 확인 등)
+- **Card**: 섹션 구분 (상품 설명, 리뷰, 스펙 등)
+- **Separator**: 항목 구분
+
+### Card 컴포넌트 구조
+```typescript
+<Card>
+  <CardHeader>
+    <CardTitle>섹션 제목</CardTitle>
+  </CardHeader>
+  <CardContent>
+    {/* 컨텐츠 */}
+  </CardContent>
+</Card>
+```
+
+## 한국어 UI 텍스트 표준
+
+### 가격 및 통화 표시
+```typescript
+const formatPrice = (price: number) => {
+  return new Intl.NumberFormat('ko-KR').format(price);
+};
+// 사용: {formatPrice(product.price)}원
+```
+
+### 날짜 표시
+```typescript
+const formatDate = (dateString: string) => {
+  return new Date(dateString).toLocaleDateString('ko-KR');
+};
+```
+
+### 상태 텍스트
+- 재고: "재고 있음" / "재고 부족" / "품절"
+- 배송: "무료배송", "{n}일 내 배송"
+- 버튼: "장바구니에 담기", "바로 구매하기"
+
+## 상태 관리 패턴
+
+### Zustand 스토어 사용
+```typescript
+import { useCartStore } from '@/with-rules/features/cart/model/cartStore';
+
+const addToCart = useCartStore(state => state.addToCart);
+```
+
+### 로컬 상태 관리
+```typescript
+const [quantity, setQuantity] = useState(1);
+const [isAddingToCart, setIsAddingToCart] = useState(false);
+```
+
+### 로딩 상태 처리
+```typescript
+const [isLoading, setIsLoading] = useState(false);
+
+const handleAction = async () => {
+  setIsLoading(true);
+  try {
+    await someAsyncOperation();
+  } finally {
+    setIsLoading(false);
+  }
+};
+```
+
+## 조건부 렌더링 패턴
+
+### 데이터 존재 여부에 따른 렌더링
+```typescript
+{product.tags.length > 0 && (
+  <div className="space-y-2">
+    {/* 태그 표시 */}
+  </div>
+)}
+```
+
+### 재고 상태에 따른 버튼 비활성화
+```typescript
+<Button
+  disabled={product.availability === 'out-of-stock' || isLoading}
+>
+  {isLoading ? '처리 중...' : '장바구니에 담기'}
+</Button>
+```
+
+## 스타일링 패턴
+
+### Tailwind 클래스 구조
+```typescript
+<div className="space-y-6">
+  <div className="space-y-2">
+    {/* 콘텐츠 */}
+  </div>
+</div>
+```
+
+### 반응형 디자인
+- 모바일 우선 접근
+- `flex-col` 기본, 큰 화면에서 `md:flex-row`
+- `w-full`로 버튼 너비 설정
+
+### 색상 팔레트
+- 주요 텍스트: `text-gray-900`
+- 보조 텍스트: `text-gray-600`, `text-gray-700`
+- 강조: `text-blue-500`, `text-yellow-400`
+- 배경: `bg-gray-200`, `bg-yellow-400`
+
+## 유틸리티 함수 패턴
+
+### 별점 표시 함수
+```typescript
+const renderStars = (rating: number) => {
+  return Array.from({ length: 5 }, (_, index) => (
+    <span
+      key={index}
+      className={`text-lg ${
+        index < Math.floor(rating) ? 'text-yellow-400' : 'text-gray-300'
+      }`}
+    >
+      ★
+    </span>
+  ));
+};
+```
+
+### 수량 조절 함수
+```typescrip
+const increaseQuantity = () => {
+  if (quantity < product.stock) {
+    setQuantity(prev => prev + 1);
+  }
+};
+```
+
+## Import 구조
+
+```typescript
+// 1. React 및 외부 라이브러리
+import React, { useState } from 'react';
+
+// 2. shadcn/ui 컴포넌트
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+
+// 3. 상태 관리
+import { useCartStore } from '@/with-rules/features/cart/model/cartStore';
+
+// 4. 타입 정의
+import type { Product } from '@/with-rules/shared/types/product';
+```
+
+## 컴포넌트 분리 원칙
+
+### 단일 책임 원칙 준수
+- **ProductActions**: 가격, 수량 선택, 장바구니/구매 액션
+- **ProductReviews**: 리뷰 표시, 평점 요약
+- **ProductSpecs**: 상품 설명, 특징, 상세 스펙
+
+### 재사용성 고려
+- 각 컴포넌트는 독립적으로 사용 가능
+- Product 타입에 의존하지만 다른 props로 확장 가능
+- shadcn/ui 기반으로 스타일링 일관성 유지

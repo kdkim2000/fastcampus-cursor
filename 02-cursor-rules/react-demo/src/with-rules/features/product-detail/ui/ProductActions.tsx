@@ -1,35 +1,45 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { useToast } from '../../../../hooks/use-toast';
 import { useCartStore } from '@/with-rules/features/cart/model/cartStore';
 import type { Product } from '@/with-rules/shared/types/product';
 
 interface ProductActionsProps {
   product: Product;
 }
-
 const ProductActions: React.FC<ProductActionsProps> = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
   const [isAddingToCart, setIsAddingToCart] = useState(false);
+  const { toast } = useToast();
   const addToCart = useCartStore(state => state.addToCart);
 
   const handleAddToCart = async () => {
     setIsAddingToCart(true);
-    
-    // 장바구니 추가 시뮬레이션
-    await new Promise(resolve => setTimeout(resolve, 500));
-    
-    addToCart(product, quantity);
-    setIsAddingToCart(false);
-    
-    // 성공 피드백 (실제로는 toast 등을 사용)
-    alert(`${product.name}이(가) 장바구니에 추가되었습니다!`);
+
+    try {
+      // 장바구니 추가 시뮬레이션
+      await new Promise(resolve => setTimeout(resolve, 500));
+
+      addToCart(product, quantity);
+
+      // 성공 피드백
+      toast({
+        title: "장바구니 추가 완료",
+        description: `${product.name}이(가) 장바구니에 추가되었습니다.`,
+      });
+    } finally {
+      setIsAddingToCart(false);
+    }
   };
 
   const handleBuyNow = () => {
     addToCart(product, quantity);
     // 실제로는 결제 페이지로 이동
-    alert('결제 페이지로 이동합니다.');
+    toast({
+      title: "결제 진행",
+      description: "결제 페이지로 이동합니다.",
+    });
   };
 
   const increaseQuantity = () => {
@@ -45,7 +55,7 @@ const ProductActions: React.FC<ProductActionsProps> = ({ product }) => {
   };
 
   const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('ko-KR').format(price);
+    return new Intl.NumberFormat('ko-KR', { style: 'currency', currency: 'KRW' }).format(price);
   };
 
   return (
@@ -54,11 +64,11 @@ const ProductActions: React.FC<ProductActionsProps> = ({ product }) => {
       <div className="space-y-2">
         <div className="flex items-center space-x-2">
           <span className="text-3xl font-bold text-gray-900">
-            {formatPrice(product.price)}원
+            {formatPrice(product.price)}
           </span>
           {product.originalPrice && (
             <span className="text-lg text-gray-500 line-through">
-              {formatPrice(product.originalPrice)}원
+              {formatPrice(product.originalPrice)}
             </span>
           )}
           {product.discount && (
@@ -74,7 +84,7 @@ const ProductActions: React.FC<ProductActionsProps> = ({ product }) => {
             <Badge>무료배송</Badge>
           )}
           <span>
-            {product.shipping.estimatedDays}일 내 배송
+            {product.shipping.estimatedDays}일 내 배송합니다.
           </span>
         </div>
       </div>
@@ -97,15 +107,19 @@ const ProductActions: React.FC<ProductActionsProps> = ({ product }) => {
         <label className="text-sm font-medium text-gray-700">수량</label>
         <div className="flex items-center space-x-3">
                   <Button
+          type="button"
           onClick={decreaseQuantity}
           disabled={quantity <= 1}
+          aria-label="수량 감소"
         >
           -
         </Button>
           <span className="w-12 text-center font-medium">{quantity}</span>
                   <Button
+          type="button"
           onClick={increaseQuantity}
           disabled={quantity >= product.stock}
+          aria-label="수량 증가"
         >
           +
         </Button>

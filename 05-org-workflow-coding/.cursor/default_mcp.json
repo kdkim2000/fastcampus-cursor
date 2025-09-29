@@ -1,0 +1,16 @@
+{
+    "mcpServers": {
+      "think-mcp-server": {
+        "command": "/Users/igyeole/.nvm/versions/node/v20.19.0/bin/node",
+        "args": [
+          "/mcp-server/think-mcp-server/dist/server.js"
+        ]
+      },
+      "calculate": {
+        "command": "/Users/igyeole/.nvm/versions/node/v20.19.0/bin/node",
+        "args": [
+            "/mcp-server/calculator-mcp/bin/index.js"
+        ]
+       }
+    }
+  }
