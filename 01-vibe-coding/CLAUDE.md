@@ -8,12 +8,12 @@ This is a Korean web development portfolio site called "VIBE CODING" - a static 
 
 ## Architecture
 
-- **Frontend**: Vanilla HTML, CSS, and JavaScript (no frameworks)
-- **Structure**: Single-page application with multiple sections
-- **Styling**: CSS custom properties (CSS variables) for theming
-- **Authentication**: Mock authentication system with local storage
-- **Animations**: CSS animations with Intersection Observer API
-- **Responsive Design**: Mobile-first approach with CSS Grid and Flexbox
+- **Frontend** : Vanilla HTML, CSS, and JavaScript (no frameworks)
+- **Structure** : Single-page application with multiple sections
+- **Styling** : CSS custom properties (CSS variables) for theming
+- **Authentication** : Mock authentication system with local storage
+- **Animations** : CSS animations with Intersection Observer API
+- **Responsive Design** : Mobile-first approach with CSS Grid and Flexbox
 
 ## Key Components
 
@@ -37,10 +37,10 @@ This is a Korean web development portfolio site called "VIBE CODING" - a static 
 
 This is a static site with no build process. Common development tasks:
 
-- **Development**: Open `index.html` in a browser or use a local server
-- **Live Server**: Use VS Code Live Server extension for hot reload
-- **Testing**: Manual testing in browser (no automated tests)
-- **Linting**: No specific linting setup (vanilla code)
+- **Development** : Open `index.html` in a browser or use a local server
+- **Live Server** : Use VS Code Live Server extension for hot reload
+- **Testing** : Manual testing in browser (no automated tests)
+- **Linting** : No specific linting setup (vanilla code)
 
 ## Code Organization
 

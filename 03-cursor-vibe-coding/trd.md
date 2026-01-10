@@ -51,7 +51,7 @@ src/
 | `id` | `uuid` | Primary Key, `uuid_generate_v4()` | 열(Lane) 고유 ID |
 | `title` | `text` | Not Null | 열 제목 (예: "할 일") |
 | `position` | `integer` | Not Null | 보드 내 열 순서 |
-| `board_id` | `uuid` | **Foreign Key to `boards.id`**, Not Null | 소속된 보드의 ID |
+| `board_id` | `uuid` | **Foreign Key to `boards.id`** , Not Null | 소속된 보드의 ID |
 
 #### **4.3. `cards` 테이블**
 | Column Name | Data Type | Constraints | Description |
@@ -60,7 +60,7 @@ src/
 | `title` | `text` | Not Null | 카드 제목 |
 | `description`| `text` | Nullable | 카드 상세 설명 |
 | `position` | `integer` | Not Null | 열 내 카드 순서 |
-| `column_id` | `uuid` | **Foreign Key to `columns.id`**, Not Null | 소속된 열의 ID |
+| `column_id` | `uuid` | **Foreign Key to `columns.id`** , Not Null | 소속된 열의 ID |
 
 **5. 핵심 기술 구현 방안**
 *   **라우팅:** `React Router`를 사용하여 `/` (홈) 와 `/board/:slug` (보드 페이지) 경로를 관리합니다.

@@ -9,7 +9,7 @@ alwaysApply: false
 
 Context-driven development의 1단계: 구현 전 필요한 정보 수집 및 검증
 
-**적용 조건**: 004-project-workflow의 Phase 1 상태일 때
+**적용 조건** : 004-project-workflow의 Phase 1 상태일 때
 
 ## 핵심 원칙
 
@@ -17,9 +17,9 @@ Context-driven development의 1단계: 구현 전 필요한 정보 수집 및 �
 
 > 큰 그림에서 세부사항으로 진행
 
-1. **필수 (Must)**: 요구사항, 페이지/컴포넌트 매핑, 데이터 구조
-2. **중요 (Should)**: 상태 관리, 동작 프로세스
-3. **선택 (Could)**: UI 세부사항, 최적화
+1. **필수 (Must)** : 요구사항, 페이지/컴포넌트 매핑, 데이터 구조
+2. **중요 (Should)** : 상태 관리, 동작 프로세스
+3. **선택 (Could)** : UI 세부사항, 최적화
 
 ### 📋 Context 수집 체크리스트
 
@@ -62,14 +62,14 @@ Context-driven development의 1단계: 구현 전 필요한 정보 수집 및 �
 
 ### ✅ 구현 준비 완료 기준
 
-**진행 가능 (✅)**:
+**진행 가능 (✅)** :
 
 -   필수 항목 (1,2,5) 100% 완료
 -   중요 항목 (3,4) 80% 이상 완료
 -   모든 Edge Case 식별 완료
 -   명확한 구현 계획 수립
 
-**더 조사 필요 (❌)**:
+**더 조사 필요 (❌)** :
 
 -   필수 항목 미완료
 -   핵심 로직 불명확
@@ -81,41 +81,41 @@ Context-driven development의 1단계: 구현 전 필요한 정보 수집 및 �
 ```markdown
 ## Context Summary
 
-**도메인**: [board]
-**작업 유형**: [Bugfix/Feature/Enhancement]
-**핵심 기능**: [비즈니스 로직 간단 설명]
+**도메인** : [board]
+**작업 유형** : [Bugfix/Feature/Enhancement]
+**핵심 기능** : [비즈니스 로직 간단 설명]
 
-**Page & Component 매핑**:
+**Page & Component 매핑** :
 
 -   페이지: [src/app/[domain]/... 경로]
 -   주요 컴포넌트: [components/templates/[domain]/...]
 -   재사용 컴포넌트: [components/organisms/[domain]/...]
 
-**상태 관리**:
+**상태 관리** :
 
 -   Local State: [useState 사용 부분]
 -   Global State: [components/templates/[domain]/store/...]
 -   Server State: [components/templates/[domain]/hooks/...]
 
-**동작 프로세스**:
+**동작 프로세스** :
 
 1. [사용자 액션 1] → [Event Handler] → [API 호출/State 변경]
 2. [사용자 액션 2] → [Event Handler] → [결과 처리]
 3. [완료/에러 처리]
 
-**데이터 구조**:
+**데이터 구조** :
 
 -   Request: [API 요청 스키마]
 -   Response: [API 응답 스키마]
 -   Types: [components/templates/[domain]/types/...]
 
-**준비 상태**: [✅ 구현 가능 / ❌ 더 조사 필요]
-**미해결 이슈**: [있다면 나열]
+**준비 상태** : [✅ 구현 가능 / ❌ 더 조사 필요]
+**미해결 이슈** : [있다면 나열]
 ```
 
 ### 🚀 다음 단계 진행 조건
 
-**Planning 단계 완료 후**:
+**Planning 단계 완료 후** :
 
 -   ✅ 구현 가능 상태 + **명시적 트리거** → 004번 오케스트레이션이 [1002-context-act.mdc](mdc:.cursor/rules/1002-context-act.mdc) 호출
 -   ❌ 더 조사 필요 → 부족한 Context 추가 수집 후 재평가
@@ -130,13 +130,13 @@ Context-driven development의 1단계: 구현 전 필요한 정보 수집 및 �
 
 ### 🔄 단계 진행 규칙
 
-**Planning 단계에서 벗어나는 조건**:
+**Planning 단계에서 벗어나는 조건** :
 
 1. 필수 Context (1,2,5) 100% 완료
 2. 중요 Context (3,4) 80% 이상 완료
 3. 명시적 구현 트리거 발동 (004번에서 감지)
 
-**Planning 단계 유지 조건**:
+**Planning 단계 유지 조건** :
 
 -   위 조건 중 하나라도 미충족 시 계속 Planning 상태 유지
 -   사용자에게 되물어서 명확한 plan 완성 필요
@@ -144,13 +144,13 @@ Context-driven development의 1단계: 구현 전 필요한 정보 수집 및 �
 
 ### 💡 Planning 핵심 원칙
 
-**목적**: 전체 그림 이해 → 세부사항 파악
-**산출물**: 명확한 구현 계획  
-**체크포인트**: 모든 Edge Case 식별
+**목적** : 전체 그림 이해 → 세부사항 파악
+**산출물** : 명확한 구현 계획  
+**체크포인트** : 모든 Edge Case 식별
 
 ### 🔗 오케스트레이션 연동
 
-**004번과의 연동**:
+**004번과의 연동** :
 
 -   이 규칙은 004번의 Phase 1 상태에서만 활성화
 -   완료 조건 충족 + 트리거 발동 시 004번이 1002번 호출

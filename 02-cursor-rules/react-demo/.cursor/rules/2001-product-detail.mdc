@@ -29,10 +29,10 @@ export default ComponentName;
 ## UI 컴포넌트 사용 패턴
 
 ### shadcn/ui 컴포넌트 우선 사용
-- **Button**: 액션 버튼, 수량 조절, 폼 제출
-- **Badge**: 상태 표시 (할인율, 재고 상태, 구매 확인 등)
-- **Card**: 섹션 구분 (상품 설명, 리뷰, 스펙 등)
-- **Separator**: 항목 구분
+- **Button** : 액션 버튼, 수량 조절, 폼 제출
+- **Badge** : 상태 표시 (할인율, 재고 상태, 구매 확인 등)
+- **Card** : 섹션 구분 (상품 설명, 리뷰, 스펙 등)
+- **Separator** : 항목 구분
 
 ### Card 컴포넌트 구조
 ```typescript
@@ -187,9 +187,9 @@ import type { Product } from '@/with-rules/shared/types/product';
 ## 컴포넌트 분리 원칙
 
 ### 단일 책임 원칙 준수
-- **ProductActions**: 가격, 수량 선택, 장바구니/구매 액션
-- **ProductReviews**: 리뷰 표시, 평점 요약
-- **ProductSpecs**: 상품 설명, 특징, 상세 스펙
+- **ProductActions** : 가격, 수량 선택, 장바구니/구매 액션
+- **ProductReviews** : 리뷰 표시, 평점 요약
+- **ProductSpecs** : 상품 설명, 특징, 상세 스펙
 
 ### 재사용성 고려
 - 각 컴포넌트는 독립적으로 사용 가능

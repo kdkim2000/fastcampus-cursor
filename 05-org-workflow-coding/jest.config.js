@@ -13,11 +13,11 @@ const customJestConfig = {
     'src/**/*.{js,jsx,ts,tsx}',
     '!src/**/*.d.ts',
     '!src/**/*.stories.{js,jsx,ts,tsx}',
-    '!src/**/__tests__/**',
+    '!src/**/__tests__/** ',
     '!src/**/*.test.{js,jsx,ts,tsx}',
   ],
   testMatch: [
-    '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}',
+    '<rootDir>/src/**/__tests__/** /*.{js,jsx,ts,tsx}',
     '<rootDir>/src/**/*.{test,spec}.{js,jsx,ts,tsx}',
   ],
   moduleNameMapper: {
@@ -33,12 +33,12 @@ const customJestConfig = {
   projects: [
     {
       displayName: 'unit',
-      testMatch: ['<rootDir>/src/**/__tests__/**/*.test.{js,jsx,ts,tsx}'],
+      testMatch: ['<rootDir>/src/**/__tests__/** /*.test.{js,jsx,ts,tsx}'],
       testPathIgnorePatterns: ['<rootDir>/src/__tests__/e2e/'],
     },
     {
       displayName: 'integration',
-      testMatch: ['<rootDir>/src/components/**/__tests__/**/*.test.{js,jsx,ts,tsx}'],
+      testMatch: ['<rootDir>/src/components/**/__tests__/** /*.test.{js,jsx,ts,tsx}'],
     },
     {
       displayName: 'e2e',

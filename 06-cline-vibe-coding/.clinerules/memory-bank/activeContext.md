@@ -2,7 +2,7 @@
 
 ## Current Work Focus
 
-**Memory Bank Initialization**: Setting up comprehensive documentation system for project continuity and knowledge transfer.
+**Memory Bank Initialization** : Setting up comprehensive documentation system for project continuity and knowledge transfer.
 
 ## Recent Changes
 
@@ -46,10 +46,10 @@
 ## Active Decisions and Considerations
 
 ### Technical Decisions
-- **App Router vs Pages Router**: App Router selected for modern Next.js features and better performance
-- **Server vs Client Components**: Server-first approach with selective client components for interactivity
-- **Turbopack vs Webpack**: Turbopack chosen for faster development builds and better DX
-- **Tailwind vs Custom CSS**: Tailwind selected for rapid development and consistency
+- **App Router vs Pages Router** : App Router selected for modern Next.js features and better performance
+- **Server vs Client Components** : Server-first approach with selective client components for interactivity
+- **Turbopack vs Webpack** : Turbopack chosen for faster development builds and better DX
+- **Tailwind vs Custom CSS** : Tailwind selected for rapid development and consistency
 
 ### Architectural Patterns
 - Component composition over inheritance

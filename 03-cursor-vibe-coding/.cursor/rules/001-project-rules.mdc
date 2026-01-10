@@ -6,9 +6,9 @@ description: 칸반 보드 프로젝트의 기본 개발 규칙 및 아키텍처
 # 칸반 보드 프로젝트 개발 규칙
 
 ## 기술 스택
-- **Frontend**: React.js, Zustand (상태 관리), @dnd-kit/core (드래그 앤 드롭), React Router (페이지 라우팅)
-- **Backend**: Supabase (Postgres DB, Realtime Subscriptions, Auto-generated APIs)
-- **배포**: Vercel
+- **Frontend** : React.js, Zustand (상태 관리), @dnd-kit/core (드래그 앤 드롭), React Router (페이지 라우팅)
+- **Backend** : Supabase (Postgres DB, Realtime Subscriptions, Auto-generated APIs)
+- **배포** : Vercel
 
 ## 폴더 구조 규칙
 

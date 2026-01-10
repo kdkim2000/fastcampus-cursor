@@ -4,9 +4,9 @@ React와 Supabase를 사용하여 구현한 실시간 협업 칸반 보드 애�
 
 ## 기술 스택
 
-- **Frontend**: React.js, Zustand, @dnd-kit/core, React Router, TailwindCSS
-- **Backend**: Supabase (Postgres DB, Realtime Subscriptions, Auto-generated APIs)
-- **배포**: Vercel
+- **Frontend** : React.js, Zustand, @dnd-kit/core, React Router, TailwindCSS
+- **Backend** : Supabase (Postgres DB, Realtime Subscriptions, Auto-generated APIs)
+- **배포** : Vercel
 
 ## 주요 기능
 

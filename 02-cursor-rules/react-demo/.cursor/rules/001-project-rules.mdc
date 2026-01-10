@@ -210,12 +210,12 @@ interface ProductStore {
 ## 파일 명명과 구성
 
 ### 명명 규칙
-- **컴포넌트**: PascalCase (ProductCard.tsx)
-- **훅**: 'use' 접두사와 camelCase (useProductQuery.ts)
-- **스토어**: 'Store' 접미사와 camelCase (productStore.ts)
-- **타입**: PascalCase (ProductFilters)
-- **상수**: SCREAMING_SNAKE_CASE
-- **디렉토리**: kebab-case
+- **컴포넌트** : PascalCase (ProductCard.tsx)
+- **훅** : 'use' 접두사와 camelCase (useProductQuery.ts)
+- **스토어** : 'Store' 접미사와 camelCase (productStore.ts)
+- **타입** : PascalCase (ProductFilters)
+- **상수** : SCREAMING_SNAKE_CASE
+- **디렉토리** : kebab-case
 
 ### Import 구성 (FSD 패턴 기준)
 ```typescript
@@ -248,15 +248,15 @@ import ProductCard from './ProductCard';
 ## 구현 가이드라인
 
 ### 개발 워크플로우
-1. **계획 단계**: 아키텍처 논의하고 요구사항 분해하기
-2. **스키마 정의**: Zod 스키마와 TypeScript 타입 정의하기
-3. **스토어 설정**: 필요한 Zustand 스토어들 생성하기
-4. **컴포넌트 구조**: 컴포넌트 계층 구조 만들기
-5. **UI 구현**: shadcn/ui와 Tailwind로 구현하기
-6. **통합**: 컴포넌트들을 스토어와 쿼리와 연결하기
+1. **계획 단계** : 아키텍처 논의하고 요구사항 분해하기
+2. **스키마 정의** : Zod 스키마와 TypeScript 타입 정의하기
+3. **스토어 설정** : 필요한 Zustand 스토어들 생성하기
+4. **컴포넌트 구조** : 컴포넌트 계층 구조 만들기
+5. **UI 구현** : shadcn/ui와 Tailwind로 구현하기
+6. **통합** : 컴포넌트들을 스토어와 쿼리와 연결하기
 
 ## 단계 전환 키워드
-- **계획 모드 유지**: 이런 키워드들 없이 계속 논의
-- **구현 모드로 전환**: "실행해줘", "act", "구현해줘", "만들어줘", "코딩 시작해줘", "해보자"
+- **계획 모드 유지** : 이런 키워드들 없이 계속 논의
+- **구현 모드로 전환** : "실행해줘", "act", "구현해줘", "만들어줘", "코딩 시작해줘", "해보자"
 
 기억하기: 구현하기 전에 항상 계획 모드로 시작해서 접근법을 철저히 논의하기!
