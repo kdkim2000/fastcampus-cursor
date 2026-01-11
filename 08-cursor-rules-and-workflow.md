@@ -7,8 +7,8 @@
 을 이해했다.
 
 이제 그 개념들을
-**지속 가능하고 반복 가능한 구조**로 만드는 단계가 바로
-**Rules와 Workflow**이다.
+**지속 가능하고 반복 가능한 구조** 로 만드는 단계가 바로
+**Rules와 Workflow** 이다.
 
 Rules는 Cursor의 행동 원칙이며,
 Workflow는 Agent가 일을 수행하는 절차이다.
@@ -31,7 +31,7 @@ Cursor에서 Agent의 행동은
 
 ### 8.1.1 System Prompt
 
-**System Prompt**는
+**System Prompt** 는
 Cursor 내부에서 기본적으로 적용되는 규칙이다.
 
 - 모델의 기본 성향
@@ -48,7 +48,7 @@ System Prompt 위에서 동작한다.
 
 ### 8.1.2 User Rules
 
-**User Rules**는
+**User Rules** 는
 사용자 개인의 선호와 작업 방식을 정의한다.
 
 예시:
@@ -62,13 +62,13 @@ User Rules의 특징:
 - 생산성에 큰 영향
 
 👉 User Rules는
-**개발자의 성격을 반영**한다.
+**개발자의 성격을 반영** 한다.
 
 ---
 
 ### 8.1.3 Project Rules
 
-**Project Rules**는
+**Project Rules** 는
 특정 프로젝트에만 적용되는 규칙이다.
 
 예시:
@@ -83,7 +83,7 @@ Project Rules의 특징:
 - 실무에서 가장 중요
 
 👉 Project Rules는
-**팀의 합의가 코드로 표현된 것**이다.
+**팀의 합의가 코드로 표현된 것** 이다.
 
 ---
 
@@ -112,7 +112,7 @@ Project Rules의 특징:
 ## 8.3 Workflow 설계
 
 Rules가 “정책”이라면,
-Workflow는 **실행 절차**이다.
+Workflow는 **실행 절차** 이다.
 
 본 강의에서는
 Agent 작업을 다음 세 단계로 나눈다.
@@ -196,5 +196,5 @@ Agent는:
 ---
 
 ➡ 다음 장에서는  
-**「MCP(Model Context Protocol)와 확장」**을 통해  
+**「MCP(Model Context Protocol)와 확장」** 을 통해  
 Cursor를 외부 세계와 연결하는 방법을 살펴본다.
