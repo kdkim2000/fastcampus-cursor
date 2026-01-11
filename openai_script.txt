@@ -1,0 +1,109 @@
+Fastcampus 에서 "개발자에게 배우는 Cursor AI 고급 노하우" 의 교재로 정리하고자 한다.
+교재를 markdown 으로 주어지면 아래 목차에 따라 내용을 채워 뭐.
+목차에 따라 순차적으로 질문하겠다.
+
+목차는 아래 와 같다. 준비되었나?
+
+@PART04_AI시대 개발자의 역량.md 첨부 내용을 참고 하여 
+다음 섹션을 Fastcampus 교재 원고 수준으로 작성 해줘. 
+--- 
+# Part4. AI시대 개발자의 역량
+
+## AI시대 개발자의 역량
+### AI시대에서 개발자에게 요구되는 역량 
+### AI로 논문읽기 - alphaXiv 
+### AI Agent로 문서 만들기 - Genspark 
+
+
+
+🎉 이로써 전체 교재(Part1~Part4)가 논리적으로 완결되었습니다.
+아래 4개의 파일로 정리되었다. 
+---
+PART01_AI 생태계 톺아보기.md
+PART02_실무에 AI Coding 적용하기.md
+PART03_업무에 꼭 필요한 AI 고급 활용.md
+PART04_AI시대 개발자의 역량.md
+---
+이를 github 에 공유하기 위한 README.md 파일을 작성한다.
+- 전체 교재 서문 / 마무리 에필로그 작성
+- 위의 4개 파일 링크 (동일 폴더에 존재함)
+- 각 Part별 핵심 요약 & 체크리스트
+
+---
+첨부의 교재 내용을 수정하라.
+---
+- 적절한 번호를 매겨서 찾아보기 쉽게 한다. 
+- 적절한 이모지를 넣어서 내용을 더 쉽게 이해할 수 있도록 한다.
+- 출력은 markdown 으로 출력한다.
+
+
+
+---
+# Part1. AI 생태계 톺아보기
+## 강의개요
+### 개발자에게 AI도구의 의미
+### 왜 Vibe Coding을 실무에서 하기 어려운가
+### Chat에서 Agent로
+
+## 개발에 필요한 AI 딥다이브
+### 개발에 활용 가능한 AI 도구의 종류 
+### 맥락(Context)을 어떻게 전달해야 하는가
+### AI를 위임과 협업의 관점으로 바라보기
+### Code Agent의 등장이 시사하는 것
+---
+# Part2. 실무에 AI Coding 적용하기
+## AI Coding을 위한 보안 가이드
+### AI활용에서의 보안 문제 
+### AI도구별 보안정책에 대해
+
+## AI 주도로 개발하기 - Cursor
+### Cursor란 무엇인가
+### Cursor 설치 및 기초 사용법
+### Rules 설정으로 Cursor를 강화해보자
+### _MCP를 활용해 Cursor를 강화해보자
+
+## Cursor를 활용해 웹페이지를 만들어보자
+### 요구사항을 바탕으로 Cursor 환경 구성하기
+---
+# Part3. 업무에 꼭 필요한 AI 고급 활용
+
+## Agent에 대해 알아보자
+### Agent란 무엇인가(Model, Instructions, Tools)
+### Agent에게 규칙(Instruction)을 부여하는 방법 - 개발 Prompt 작성하는 방법
+### Agent의 System Prompt 톺아보기 - Context 힌트 알아보기
+### Agent가 Tools를 활용하는 방법
+### Agent의 Memory에 대해
+### 당신은 Claude Sonnet 4로 구동되는 AI 코딩 어시스턴트입니다
+
+## 나 대신 Cursor가 일을 잘하게 만드는 방법
+### 내가 일하는 방식을 분해하자 (Workflow 구성하기)
+### Workflow를 Rules와 MCP로 만들기
+### 내가 일하는 방식대로 Workflow 구성하기 실습
+### Rules로 Agent에게 명확히 지시하기 실습 (Instruction)
+### Agent가 활용 가능한 Tool 설정하기 실습 (MCP Server)
+### 나만의 Mode로 상황에 맞는 Model 설정하기 (Custom Mode) 
+### MCP Server를 활용하여 Task별로 개발하기
+### AI를 활용한 테스트코드 작성하기
+### Cursor에게 문서작업 위임하기
+### Cursor 고급 기법을 활용한 FrontEnd 개발 실습 
+
+## 조직에서 AI와 함꼐 일하기
+### 개인의 활용과 조직에서의 활용은 무엇이 다를까_
+### 표준 라이브러리 및 프레임워크 정하기 (AI에게 개발철학 주입하기) 
+### Context의 범위를 제한하기 위한 폴더구조
+### 표준 Workflow를 통한 Rules 공유하기 
+### 표준 workflow를 통한 MCP Server 관리하기
+### Code Rabbit을 통한 Code Review 환경 구성하기
+
+## Cursor를 못쓴다면 오픈소스를 써보자
+### 보안이 강화된 환경에서 오픈소스 Coding Tool의 활용 
+### Cline을 통한 Agent Coding 환경 구성하기 
+### Cursor 대용으로 Continue 사용하기 
+### Ollama를 활용한 자체 Model 설정하기 
+---
+# Part4. AI시대 개발자의 역량
+
+## AI시대 개발자의 역량
+### AI시대에서 개발자에게 요구되는 역량 
+### AI로 논문읽기 - alphaXiv 
+### AI Agent로 문서 만들기 - Genspark 
