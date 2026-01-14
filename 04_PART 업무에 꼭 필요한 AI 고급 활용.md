@@ -24,9 +24,9 @@ Agents are systems that **independently accomplish tasks** on your behalf.
 
 ### OpenAI가 생각하는 Agent 설계의 기초 요소
 
-- **Model**: 에이전트의 추론과 의사결정을 담당하는 LLM
-- **Tools**: 에이전트가 행동을 취할 수 있는 외부 함수나 API
-- **Instructions**: 에이전트의 행동을 정의하는 명확한 지침
+- **Model** : 에이전트의 추론과 의사결정을 담당하는 LLM
+- **Tools** : 에이전트가 행동을 취할 수 있는 외부 함수나 API
+- **Instructions** : 에이전트의 행동을 정의하는 명확한 지침
 
 ```python
 weather_agent = Agent(
@@ -40,8 +40,8 @@ weather_agent = Agent(
 
 Agent는 Agentic System의 한부분으로 LLM이 스스로 작업을 통제하는 것을 의미한다.
 
-- **Workflows**: LLM과 도구가 사전 정의된 코드 경로를 통해 조정되는 시스템
-- **Agents**: LLM이 자체 프로세스와 도구 사용을 동적으로 지시하는 시스템
+- **Workflows** : LLM과 도구가 사전 정의된 코드 경로를 통해 조정되는 시스템
+- **Agents** : LLM이 자체 프로세스와 도구 사용을 동적으로 지시하는 시스템
 
 ### Workflow: Prompt chaining
 
@@ -59,15 +59,15 @@ Agent는 Agentic System의 한부분으로 LLM이 스스로 작업을 통제하�
 
 ## Cursor에 Agent의 개념이 녹아있습니다
 
-Cursor는 다양한 설정을 통해 **Agent**로서의 기능을 수행할 수 있습니다. 
+Cursor는 다양한 설정을 통해 **Agent** 로서의 기능을 수행할 수 있습니다. 
 
-- **Models**: 다양한 모델을 설정할 수 있습니다.
-- **Tools & Integrations**: 외부 도구 및 통합 기능을 설정할 수 있습니다.
-- **Rules & Memories**: 규칙과 메모리를 관리합니다.
+- **Models** : 다양한 모델을 설정할 수 있습니다.
+- **Tools & Integrations** : 외부 도구 및 통합 기능을 설정할 수 있습니다.
+- **Rules & Memories** : 규칙과 메모리를 관리합니다.
 
 ## Cursor를 Agent로 바라보고 사용해야 합니다
 
-Cursor는 다양한 도구와 기능을 통해 **Agent**로서의 역할을 수행합니다. 사용자는 이를 통해 검색, 편집, 명령 실행 등의 작업을 수행할 수 있습니다.
+Cursor는 다양한 도구와 기능을 통해 **Agent** 로서의 역할을 수행합니다. 사용자는 이를 통해 검색, 편집, 명령 실행 등의 작업을 수행할 수 있습니다.
 ---
 ## Agent에게 규칙을 부여하는 방법
 
@@ -84,9 +84,9 @@ Cursor는 다양한 도구와 기능을 통해 **Agent**로서의 역할을 수�
 
 ### OpenAI가 생각하는 Agent 설계의 기초 요소
 
-- **Model**: 에이전트의 추론과 의사결정을 담당하는 LLM
-- **Tools**: 에이전트가 사용할 수 있는 외부 함수나 API
-- **Instructions**: 에이전트의 행동 방식을 정의하는 명시적인 가이드라인
+- **Model** : 에이전트의 추론과 의사결정을 담당하는 LLM
+- **Tools** : 에이전트가 사용할 수 있는 외부 함수나 API
+- **Instructions** : 에이전트의 행동 방식을 정의하는 명시적인 가이드라인
 
 ```python
 weather_agent = Agent(
@@ -107,7 +107,7 @@ Agent가 행동을 하도록 하려면 어떻게 해야할까?
 
 ## WHY
 
-- **AI Agent**의 역할을 부여
+- **AI Agent** 의 역할을 부여
 - AI Agent가 달성할 목표를 정의
 - AI Agent의 구조 및 설정을 정의
 - AI Agent의 가드레일을 정의 (예: System Prompt)
@@ -140,9 +140,9 @@ Agent가 행동을 하도록 하려면 어떻게 해야할까?
 
 재사용 가능하고 범위가 지정된 지침으로 Agent 모델의 동작을 제어합니다.
 
-- **Project Rules**: `.cursor/rules`에 저장되며, 버전 관리되고 코드베이스에 범위가 지정됩니다.
-- **User Rules**: Cursor 환경에 전역적으로 적용됩니다. 설정에서 정의되며 항상 적용됩니다.
-- **.cursorrules (Legacy)**: 여전히 지원되지만 더 이상 사용되지 않습니다. 대신 Project Rules를 사용하세요.
+- **Project Rules** : `.cursor/rules`에 저장되며, 버전 관리되고 코드베이스에 범위가 지정됩니다.
+- **User Rules** : Cursor 환경에 전역적으로 적용됩니다. 설정에서 정의되며 항상 적용됩니다.
+- **.cursorrules (Legacy)** : 여전히 지원되지만 더 이상 사용되지 않습니다. 대신 Project Rules를 사용하세요.
 
 ## 규칙 작동 방식
 
@@ -173,9 +173,9 @@ Agent가 행동을 하도록 하려면 어떻게 해야할까?
 3. Cursor의 Long Term Memory 전략 들여다보기
 
 ### 왜 System Prompt를 봐야하는가
-System Prompt에는 **Agent 전략**이 담겨있기 때문이다.
+System Prompt에는 **Agent 전략** 이 담겨있기 때문이다.
 
-> **출처**: 비트코인 백서
+> **출처** : 비트코인 백서
 
 ## Agent가 Tools를 활용하는 방법
 
@@ -190,28 +190,28 @@ Agent가 외부 시스템과 상호작용할 수 있도록 해주는 확장 기�
 ### Native Tool Use
 Grok 4는 도구 사용을 위해 강화 학습으로 훈련되었습니다. 이는 Grok이 코드 해석기나 웹 브라우징과 같은 도구를 사용하여 사고를 확장할 수 있게 합니다. Grok은 실시간 정보 검색이나 어려운 연구 질문에 답할 때 자체 검색 쿼리를 선택하여 웹 전반에 걸쳐 지식을 찾고 깊이 있는 고품질의 응답을 제공합니다.
 
-- **X Search**: 고급 키워드 및 의미론적 검색 도구를 사용하여 답변의 품질을 향상시킵니다.
+- **X Search** : 고급 키워드 및 의미론적 검색 도구를 사용하여 답변의 품질을 향상시킵니다.
 
 
 ## Agent의 성능 평가
 
-Agent의 성능을 평가하는 지표로 다양한 **Tool 사용**이 들어갑니다.
+Agent의 성능을 평가하는 지표로 다양한 **Tool 사용** 이 들어갑니다.
 
 ### LLM이 Tool을 사용하는 방식
 
-LLM은 입력을 받아 **Tool**을 호출하고, 결과를 출력합니다. 이 과정에서 피드백을 통해 성능을 개선합니다.
+LLM은 입력을 받아 **Tool** 을 호출하고, 결과를 출력합니다. 이 과정에서 피드백을 통해 성능을 개선합니다.
 
 [그림: LLM과 Tool의 상호작용]
-- **In**: 입력
-- **LLM call**: LLM 호출
-- **Tool**: 도구 사용
-- **Out**: 출력
-- **Feedback**: 피드백을 통한 개선
+- **In** : 입력
+- **LLM call** : LLM 호출
+- **Tool** : 도구 사용
+- **Out** : 출력
+- **Feedback** : 피드백을 통한 개선
 
 ### 사례: Alice가 우산이 필요한가?
 
-- **alice**라는 인물을 찾고
-- **alice**의 위치를 찾고
+- **alice** 라는 인물을 찾고
+- **alice** 의 위치를 찾고
 - 해당 위치의 날씨를 가져옵니다
 
 [그림: Tool Invocation]
@@ -228,14 +228,14 @@ LLM은 입력을 받아 **Tool**을 호출하고, 결과를 출력합니다. 이
   }
   ```
 
-- **결론**: 현재 날씨는 부분적으로 흐리고 온도는 68°F입니다. 따라서 Alice가 지금 우산이 필요할 가능성은 낮습니다.
+- **결론** : 현재 날씨는 부분적으로 흐리고 온도는 68°F입니다. 따라서 Alice가 지금 우산이 필요할 가능성은 낮습니다.
 
 ### Tool Calling
 
-자연어를 통해 **Structured Tool**을 호출합니다.
+자연어를 통해 **Structured Tool** 을 호출합니다.
 
 [그림: Tool Calling]
-- **Natural language**: "What is 2 times 3"
+- **Natural language** : "What is 2 times 3"
 - **Structured Tool** :
   ```python
   @tool
@@ -248,11 +248,11 @@ LLM은 입력을 받아 **Tool**을 호출하고, 결과를 출력합니다. 이
 
 ### 구조화된 방식으로 Tool을 호출한다
 
-Agent가 구성하는 **Workflow** 내에서 Tool을 **Chain** 속에서 호출합니다.
+Agent가 구성하는 **Workflow** 내에서 Tool을 ** Chain** 속에서 호출합니다.
 
 [그림: Tool Chain]
-- **Chain**: RunnableSequence
-- **Tool**: a
+- **Chain** : RunnableSequence
+- **Tool** : a
 
 ### Tool 사용 규칙
 
@@ -264,21 +264,21 @@ Agent가 구성하는 **Workflow** 내에서 Tool을 **Chain** 속에서 호출�
 
 ### MCP 기본 구조
 
-MCP는 USB 규격과 같이 각종 도구들이 **host**들과 연결할 수 있도록 합니다.
+MCP는 USB 규격과 같이 각종 도구들이 **host** 들과 연결할 수 있도록 합니다.
 
 [그림: MCP Architecture]
-- **MCP clients**: client.py
-- **MCP hosts**: Claude, 기타
-- **MCP server**: Local data sources, Remote services
+- **MCP clients** : client.py
+- **MCP hosts** : Claude, 기타
+- **MCP server** : Local data sources, Remote services
 
 ### Cursor와 MCP 서버
 
-Cursor는 다양한 **MCP 서버**와 연결되어 있습니다.
+Cursor는 다양한 **MCP 서버** 와 연결되어 있습니다.
 
 [그림: MCP 서버]
-- **Node.js**: Desktop Commander, Think MCP Server
-- **Python**: FireCrawL, MCP-Atlassian
-- **Remote MCP Servers**: Notion, Context7, Sequential Thinking Tools, Supabase MCP Server, Linear
+- **Node.js** : Desktop Commander, Think MCP Server
+- **Python** : FireCrawL, MCP-Atlassian
+- **Remote MCP Servers** : Notion, Context7, Sequential Thinking Tools, Supabase MCP Server, Linear
 
 
 
@@ -292,7 +292,7 @@ Cursor는 다양한 **MCP 서버**와 연결되어 있습니다.
 
 ### AI는 왜 자꾸 잊어버릴까?
 
-AI 시스템은 **기억력에 제한**이 있습니다. 이는 **Context Window**의 크기와 관련이 있습니다. 여러 작업(Task)이 진행되면서 이전의 정보가 삭제될 수 있습니다.
+AI 시스템은 **기억력에 제한** 이 있습니다. 이는 **Context Window** 의 크기와 관련이 있습니다. 여러 작업(Task)이 진행되면서 이전의 정보가 삭제될 수 있습니다.
 
 [그림: Context Window]
 - Task 1, Task 2, Task 3, Task 4, Task 5
@@ -300,17 +300,17 @@ AI 시스템은 **기억력에 제한**이 있습니다. 이는 **Context Window
 
 ### Context를 유지하려면 Memory가 필요하다
 
-Agent의 **Context Window**의 한계로 인해 이를 관리해줄 필요가 있습니다. 
+Agent의 **Context Window** 의 한계로 인해 이를 관리해줄 필요가 있습니다. 
 
 [그림: Memory 관리]
-- **Remember**: LONG-TERM MEMORY
-- **Summarize**: WORKING MEMORY
-- **Forget**: 정보가 삭제됨
+- **Remember** : LONG-TERM MEMORY
+- **Summarize** : WORKING MEMORY
+- **Forget** : 정보가 삭제됨
 
 ### Agent Memory의 종류
 
-- **Long Term Memory**: Work History
-- **Short Term Memory**: Working Memory
+- **Long Term Memory** : Work History
+- **Short Term Memory** : Working Memory
 
 ## 어떻게 하면 더 잘 기억할까?
 
@@ -320,7 +320,7 @@ Agent의 **Context Window**의 한계로 인해 이를 관리해줄 필요가 �
 ## 인간은 어떻게 새로운 상황을 빠르게 인지할까?
 
 **지적 활동의 프레임워크**  
-우리는 과거 경험을 **구조화된 지식 단위**로 저장하고 재사용한다.
+우리는 과거 경험을 **구조화된 지식 단위** 로 저장하고 재사용한다.
 
 ## 프레임이란?
 
@@ -349,7 +349,7 @@ Agent의 **Context Window**의 한계로 인해 이를 관리해줄 필요가 �
 
 ## Frame이 선택되는 과정
 
-- **상황 입력**: "문을 열고 들어갔더니 의자와 칠판이 있다."
+- **상황 입력** : "문을 열고 들어갔더니 의자와 칠판이 있다."
   - 후보 프레임 활성화: 방 프레임(기본) or 교실 프레임(의자+칠판) or 회의실 프레임(의자+칠판)
   - 증거 수집: 칠판이 있는 경우 교실일 확률이 높음, 의자가 많다면 교실일 확률이 높음
   - 최적 프레임 선택: "교실 프레임"에 더 가까움
@@ -365,9 +365,9 @@ Cline은 다양한 작업을 수행할 수 있는 오픈 소스 AI 코딩 플랫
 
 ## Memory Bank의 Frame
 
-- **개발자**: "어제 작업한 로그인 API 마저 완성해줘"
-- **Agent**: "어떤 프로젝트인가요? 어떤 기술 스택을...?"
-- **개발자**: 😩 (처음부터 다시 설명)
+- **개발자** : "어제 작업한 로그인 API 마저 완성해줘"
+- **Agent** : "어떤 프로젝트인가요? 어떤 기술 스택을...?"
+- **개발자** : 😩 (처음부터 다시 설명)
 
 ### PROJECT-FRAME: "Cline Memory Bank"
 
@@ -429,7 +429,7 @@ Cline은 다양한 작업을 수행할 수 있는 오픈 소스 AI 코딩 플랫
 
 ## Cursor의 Memory 관리 기능
 
-Cursor에도 기본적으로 **Memory**와 작업을 관리하기 위한 기능이 있다. 작업을 하다보면 이것만으로 **Context** 유지가 어렵다.
+Cursor에도 기본적으로 **Memory** 와 작업을 관리하기 위한 기능이 있다. 작업을 하다보면 이것만으로 **Context** 유지가 어렵다.
 
 ## WHY, HOW, WHAT
 
@@ -471,13 +471,13 @@ Cursor에도 기본적으로 **Memory**와 작업을 관리하기 위한 기능�
 ## Agent가 일을 하게 하려면 상황에 맞는 맥락(Context)이 필요하다
 
 [그림: Agent의 작업 흐름]
-- **Incoming Email**: 이메일 수신
-- **Agent**: 작업 수행
-  - **Calendar Tool**: 일정 확인 및 회의 예약
-  - **Email History Tool**: 수신자에 맞는 톤 설정
-  - **Meeting Notes Tool**: 이전 회의 노트 가져오기
-  - **Contacts Tool**: 수신자 정보 가져오기
-- **Generated Email**: 생성된 이메일
+- **Incoming Email** : 이메일 수신
+- **Agent** : 작업 수행
+  - **Calendar Tool** : 일정 확인 및 회의 예약
+  - **Email History Tool** : 수신자에 맞는 톤 설정
+  - **Meeting Notes Tool** : 이전 회의 노트 가져오기
+  - **Contacts Tool** : 수신자 정보 가져오기
+- **Generated Email** : 생성된 이메일
 
 ### 문제 해결 과정
 
@@ -564,9 +564,9 @@ Cursor에도 기본적으로 **Memory**와 작업을 관리하기 위한 기능�
 
 - **Phase 2: 구현 완료**
   1. **엔티티 계층 (entities/workflow/)**
-     - **타입 정의**: `WorkflowStatus`, `Workflow`, `WorkflowGroup`, `WorkflowStep` 인터페이스
-     - **Zustand 스토어**: 워크플로우 상태 관리, 선택 상태, 검색 기능
-     - **WorkflowItem 컴포넌트**: 상태별 색상 표시 및 버튼 액션, 클릭 선택 기능
+     - **타입 정의** : `WorkflowStatus`, `Workflow`, `WorkflowGroup`, `WorkflowStep` 인터페이스
+     - **Zustand 스토어** : 워크플로우 상태 관리, 선택 상태, 검색 기능
+     - **WorkflowItem 컴포넌트** : 상태별 색상 표시 및 버튼 액션, 클릭 선택 기능
 
 ## Workflow를 만드는 과정
 
@@ -682,8 +682,8 @@ Cursor에도 기본적으로 **Memory**와 작업을 관리하기 위한 기능�
 
 ## Rule을 구조화하여 Workflow에 맞게 구성할 수 있다
 
-- **Rule Chain**: 구조화된 형태로 Rule을 구성하여 Token을 최소화하면서 필요한 Context를 주입
-- **Selection**: 상황에 맞게 Tool과 Rule을 호출하여 여러 유형을 사전에 정의
+- **Rule Chain** : 구조화된 형태로 Rule을 구성하여 Token을 최소화하면서 필요한 Context를 주입
+- **Selection** : 상황에 맞게 Tool과 Rule을 호출하여 여러 유형을 사전에 정의
 
 ---
 
@@ -708,8 +708,8 @@ Cursor에도 기본적으로 **Memory**와 작업을 관리하기 위한 기능�
 
 #### Instruction 구조
 
-- **Project Guideline**: Workflow의 중심이 되는 지침
-- **Workflow**: Plan, Act, Retrive로 구성된 양방향 구조
+- **Project Guideline** : Workflow의 중심이 되는 지침
+- **Workflow** : Plan, Act, Retrive로 구성된 양방향 구조
 
 
 ## Agent가 활용 가능한 Tool 설정하기
@@ -827,7 +827,7 @@ Cursor에도 기본적으로 **Memory**와 작업을 관리하기 위한 기능�
 
 ## 개인에 따른 코드 품질의 차이
 
-개인에 따라 **코드 품질의 차이**가 발생한다. 내가 작성한 코드를 다른 사람이 작성할 수 있다고 생각해야 한다.
+개인에 따라 **코드 품질의 차이** 가 발생한다. 내가 작성한 코드를 다른 사람이 작성할 수 있다고 생각해야 한다.
 
 ## 가설: AI를 활용해서 코드 품질과 생산성 둘 다 올릴 수 있을까?
 
@@ -874,8 +874,8 @@ AI Agent를 하나의 동료로 생각하여 우리의 개발 철학과 방법�
 
 ## 레거시 시스템에서 AI 적용시 고려할 사항
 
-- **Documentation**: 기능에 대한 명세와 풍부한 예시 제공
-- **Tools**: 필요한 정보와 데이터를 연계하여 일하는 방식에 맞게 도구 사용
+- **Documentation** : 기능에 대한 명세와 풍부한 예시 제공
+- **Tools** : 필요한 정보와 데이터를 연계하여 일하는 방식에 맞게 도구 사용
 
 ## One Shot Prompting을 통한 품질 향상
 
@@ -952,7 +952,7 @@ MCP Server를 통해 해당 라이브러리/프레임워크를 손쉽게 사용�
 
 ## DDD(Domain Driven Design) 그리고 FSD(Feature Sliced Design)의 등장
 
-프로젝트의 복잡성을 관리하기 위해 2003년 **Domain Driven Design**이 등장했다. Front End의 세계에서는 비교적 나중에 **Feature Sliced Design** 아키텍처가 등장했다.
+프로젝트의 복잡성을 관리하기 위해 2003년 **Domain Driven Design** 이 등장했다. Front End의 세계에서는 비교적 나중에 **Feature Sliced Design** 아키텍처가 등장했다.
 
 ### DDD 예시
 
@@ -1007,7 +1007,7 @@ DDD/FSD와 같은 아키텍처는 결합도를 낮추고 응집도를 높이기 
 
 ## 멀티 루트 워크스페이스
 
-Cursor는 **멀티 루트 워크스페이스**를 지원하여 여러 코드베이스로 작업할 수 있습니다:
+Cursor는 **멀티 루트 워크스페이스** 를 지원하여 여러 코드베이스로 작업할 수 있습니다:
 
 - 모든 코드베이스가 자동으로 연결됩니다.
 - 각 코드베이스의 컨텍스트를 AI가 사용할 수 있습니다.
@@ -1015,7 +1015,7 @@ Cursor는 **멀티 루트 워크스페이스**를 지원하여 여러 코드베�
 
 ## 하나의 작업공간에 여러 개의 폴더를 묶을 수 있다
 
-Codebase를 **indexing**하는 과정에서 하나의 작업공간에 여러 프로젝트를 묶을 수 있습니다. Codebase 분석하는 과정에서 각 폴더 단위로 **Rules**를 구분합니다.
+Codebase를 **indexing** 하는 과정에서 하나의 작업공간에 여러 프로젝트를 묶을 수 있습니다. Codebase 분석하는 과정에서 각 폴더 단위로 **Rules** 를 구분합니다.
 
 ## 중첩 규칙
 
@@ -1074,18 +1074,18 @@ project/
 
 ### Code Review를 위한 AI 도구
 
-- **Code Quality**: 코드 품질을 향상시킵니다.
-- **Code Security**: 보안 분석을 통해 소프트웨어 공급망을 보호합니다.
-- **Developer Productivity**: 개발자의 생산성을 높입니다.
+- **Code Quality** : 코드 품질을 향상시킵니다.
+- **Code Security** : 보안 분석을 통해 소프트웨어 공급망을 보호합니다.
+- **Developer Productivity** : 개발자의 생산성을 높입니다.
 
 ### [그림: CodeRabbit 아키텍처 다이어그램]
 
-- **Git Platforms**: GitHub, GitLab, Azure DevOps, Bitbucket과 연동됩니다.
-- **AI Agent**: 여러 LLMs에 요청을 보내고 응답을 받습니다.
-- **Context Enrichment**: 코드베이스의 컨텍스트를 풍부하게 합니다.
-- **Issues**: Jira, Linear와 같은 이슈 트래킹 시스템과 통합됩니다.
-- **Learnings**: CodeRabbit Knowledge Base에 학습 내용을 저장합니다.
-- **Reporting**: KPI를 추적하고 보고합니다.
+- **Git Platforms** : GitHub, GitLab, Azure DevOps, Bitbucket과 연동됩니다.
+- **AI Agent** : 여러 LLMs에 요청을 보내고 응답을 받습니다.
+- **Context Enrichment** : 코드베이스의 컨텍스트를 풍부하게 합니다.
+- **Issues** : Jira, Linear와 같은 이슈 트래킹 시스템과 통합됩니다.
+- **Learnings** : CodeRabbit Knowledge Base에 학습 내용을 저장합니다.
+- **Reporting** : KPI를 추적하고 보고합니다.
 
 
 
@@ -1098,11 +1098,11 @@ project/
 
 ### 소스코드 보안과 생산성 사이에서
 
-2025년 6월, 네이버는 4,500명에 달하는 자사 직원들에게 AI 코딩 플랫폼 **커서(Cursor)**의 사용을 공식적으로 주문했습니다.
+2025년 6월, 네이버는 4,500명에 달하는 자사 직원들에게 AI 코딩 플랫폼 **커서(Cursor)** 의 사용을 공식적으로 주문했습니다.
 
 ### 파일럿으로 먼저 사용해보기 시작했다
 
-- **개발자 대상**: 'AI 마일리지 프로그램 도입'으로 실제 효용성 검증
+- **개발자 대상** : 'AI 마일리지 프로그램 도입'으로 실제 효용성 검증
 
 ### Outbound Risk
 - 정보 유출
@@ -1144,25 +1144,25 @@ project/
 ## 서비스 서버와 클라이언트의 상호작용
 
 ### 서비스 서버
-- **Service Server**는 클라이언트로부터 **Prompt**를 받아 처리합니다.
-- 서버는 **Source Code**와 **User Rules**를 기반으로 동작합니다.
+- **Service Server** 는 클라이언트로부터 **Prompt** 를 받아 처리합니다.
+- 서버는 **Source Code** 와 **User Rules** 를 기반으로 동작합니다.
 
 ### Private LLM 서버
-- **Private LLM Server**는 명확하게 격리된 환경에서 **Source Code**를 처리합니다.
+- **Private LLM Server** 는 명확하게 격리된 환경에서 **Source Code** 를 처리합니다.
 
 ## Cline
 
-- **Cline**은 Agent 기반 Vscode Extension과 Memory bank 등의 아이디어로 시작되었습니다.
+- **Cline** 은 Agent 기반 Vscode Extension과 Memory bank 등의 아이디어로 시작되었습니다.
 - Star: 50.1k
 
 ## Roo Code
 
-- **Roo Code**는 Cline의 포크로 출발한 프로젝트로, Custom 기능이 강점입니다.
+- **Roo Code** 는 Cline의 포크로 출발한 프로젝트로, Custom 기능이 강점입니다.
 - Star: 19.3K
 
 ## Continue.dev
 
-- **Continue.dev**는 Cursor와 가장 사용성이 흡사하며, Agent, Chat, Inline Edit, Tab 기능을 제공합니다.
+- **Continue.dev** 는 Cursor와 가장 사용성이 흡사하며, Agent, Chat, Inline Edit, Tab 기능을 제공합니다.
 - Star: 28.8K
 
 ## 정리

@@ -9,8 +9,8 @@
 
 ### AI를 바라보는 관점은 '협업'에서 '위임'으로 넘어갑니다
 
-- **협업(Collaboration)**: AWS에 CI/CD 구축하는 방법 알려줄래?
-- **위임(Delegation)**: 구글, 네이버 로그인 기능 구현해줘
+- **협업(Collaboration)** : AWS에 CI/CD 구축하는 방법 알려줄래?
+- **위임(Delegation)** : 구글, 네이버 로그인 기능 구현해줘
 
 ### '위임'에는 반드시 '신뢰'라는 전제조건이 따른다
 
@@ -30,11 +30,11 @@
 
 연구 내용: 스탠포드 대학과 뉴욕대 연구팀은 GitHub Copilot이 생성하는 코드의 보안 품질을 분석했습니다. 다양한 프로그래밍 언어(Python, C, JavaScript 등)와 시나리오(예: SQL 쿼리 작성, 암호화 로직 구현)에 걸쳐 테스트를 진행했습니다.
 
-테스트한 시나리오 중 약 **40%**에서 AI가 생성한 코드에 잠재적인 보안 취약점이 포함되어 있었습니다.
+테스트한 시나리오 중 약 **40%** 에서 AI가 생성한 코드에 잠재적인 보안 취약점이 포함되어 있었습니다.
 
 ### 나도 모르게 AI에게 Context(정보꾸러미)를 전달할 수 있습니다
 
-- **Context**: ChatGPT, Claude, Gemini
+- **Context** : ChatGPT, Claude, Gemini
 
 ### 최소 권한 부여
 
@@ -109,9 +109,9 @@ window.onload = function() {
 
 ## Cursor의 보안정책 톺아보기
 
-- **Tab**을 통한 자동완성
-- **Agent**를 통한 코드 일괄 수정
-- **Inline Edit**을 통한 부분 수정
+- **Tab** 을 통한 자동완성
+- **Agent** 를 통한 코드 일괄 수정
+- **Inline Edit** 을 통한 부분 수정
 
 [그림: 보안 정책 대시보드]
 - SOC 2 Type 1 및 Type 2 인증
@@ -119,7 +119,7 @@ window.onload = function() {
 
 ## Cursor Privacy Mode
 
-Cursor는 **Privacy Mode**를 지원합니다. 이 모드는 사용자의 데이터를 학습하거나 제품 개선에 사용하지 않으며, 코드를 저장하지 않습니다.
+Cursor는 **Privacy Mode** 를 지원합니다. 이 모드는 사용자의 데이터를 학습하거나 제품 개선에 사용하지 않으며, 코드를 저장하지 않습니다.
 
 ### Privacy Settings
 
@@ -132,7 +132,7 @@ Cursor는 **Privacy Mode**를 지원합니다. 이 모드는 사용자의 데이
 
 ### Zero Data Retention
 
-**Zero Data Retention**은 고객 콘텐츠를 남용 모니터링 로그에서 제외하며, 일부 엔드포인트 동작을 변경하여 데이터 저장을 방지합니다. 예를 들어, `/v1/responses` 및 `/v1/chat/completions`의 `store` 매개변수는 항상 `false`로 처리됩니다.
+**Zero Data Retention** 은 고객 콘텐츠를 남용 모니터링 로그에서 제외하며, 일부 엔드포인트 동작을 변경하여 데이터 저장을 방지합니다. 예를 들어, `/v1/responses` 및 `/v1/chat/completions`의 `store` 매개변수는 항상 `false`로 처리됩니다.
 
 ## AI 요청
 
@@ -144,8 +144,8 @@ Cursor는 AI 요청을 서버에 전송하여 기능을 제공합니다. 이 요
 
 Cursor는 코드베이스를 의미적으로 인덱싱하여 검색 및 분석을 지원합니다. 인덱싱 기능은 파일의 해시를 계산하고, 서버와 동기화합니다.
 
-- **TurboBuffer**: 파일 검색 결과를 필터링하여 빠른 검색을 지원합니다.
-- **Exa and SerpApi**: 웹 검색 기능을 제공합니다.
+- **TurboBuffer** : 파일 검색 결과를 필터링하여 빠른 검색을 지원합니다.
+- **Exa and SerpApi** : 웹 검색 기능을 제공합니다.
 
 ## Claude Code의 보안정책 톺아보기
 
@@ -174,10 +174,10 @@ Claude Code는 설정 파일을 통해 권한과 행동을 제어할 수 있습�
 
 ### 권한 시스템
 
-- **허용 규칙**: 승인 없이 도구 사용 가능
-- **거부 규칙**: 사용 방지
-- **추가 디렉토리**: 파일 접근 확장
-- **기본 모드**: 새로운 요청 시 권한 제어
+- **허용 규칙** : 승인 없이 도구 사용 가능
+- **거부 규칙** : 사용 방지
+- **추가 디렉토리** : 파일 접근 확장
+- **기본 모드** : 새로운 요청 시 권한 제어
 
 ### 권한 관리 정책
 
@@ -207,7 +207,7 @@ Claude Code는 계층별로 설정 파일을 두고 권한 레벨을 제어할 �
 
 ### AI는 어디까지 영향을 미칠까
 
-- **AI의 권한**: AI에게 어디까지 허용해야 하는가?
+- **AI의 권한** : AI에게 어디까지 허용해야 하는가?
 - 인간이 통제할 수 있다는 믿음으로 AI를 제어
 - AI에게 인간과 동등한 보안 등급 부여
 
@@ -232,8 +232,8 @@ Claude Code는 계층별로 설정 파일을 두고 권한 레벨을 제어할 �
 
 ### 왜 Cursor인가?
 
-- **시각적 인지**: 개발자가 Context의 흐름을 실시간으로 인지할 수 있다.
-- **코드 품질**: 적절하게 Context를 구성하고 의도에 맞는 코드를 생성한다.
+- **시각적 인지** : 개발자가 Context의 흐름을 실시간으로 인지할 수 있다.
+- **코드 품질** : 적절하게 Context를 구성하고 의도에 맞는 코드를 생성한다.
 
 ## 개발을 할 때 필요한 정보 꾸러미들
 
@@ -258,10 +258,10 @@ Claude Code는 계층별로 설정 파일을 두고 권한 레벨을 제어할 �
 
 ## Context 생애주기를 명확하게 인지
 
-- **Agent**가 실시간으로 동작하는 것을 눈으로 확인할 수 있습니다.
-- **Rules**를 구조화하여 Agent의 행동을 유도할 수 있습니다.
-- 여러 **Context**를 고려하여 좋은 품질의 코드를 생성할 수 있습니다.
-- **Rules**와 **MCP Server**를 활용하여 Context를 주입할 수 있습니다.
+- **Agent** 가 실시간으로 동작하는 것을 눈으로 확인할 수 있습니다.
+- **Rules** 를 구조화하여 Agent의 행동을 유도할 수 있습니다.
+- 여러 **Context** 를 고려하여 좋은 품질의 코드를 생성할 수 있습니다.
+- **Rules** 와 **MCP Server** 를 활용하여 Context를 주입할 수 있습니다.
 
 ## Context Engineering 기법을 훈련할 때 최적의 도구
 
@@ -290,18 +290,18 @@ Claude Code는 계층별로 설정 파일을 두고 권한 레벨을 제어할 �
 
 ## 정리
 
-- **Cursor**는 어떤 회사인가요?
-- 왜 **Cursor**를 사용할까요?
-- **Cursor**로 Context를 관리하려면 어떻게 해야할까요?
+- **Cursor** 는 어떤 회사인가요?
+- 왜 **Cursor** 를 사용할까요?
+- **Cursor** 로 Context를 관리하려면 어떻게 해야할까요?
 
 
 ## Cursor 설치 및 기초 사용법
 
 ### 목차
 
-1. **Cursor**를 직접 설치해보자
-2. **Cursor Rules**에 대해 알아보자
-3. **MCP**에 대해 알아보자
+1. **Cursor** 를 직접 설치해보자
+2. **Cursor Rules** 에 대해 알아보자
+3. **MCP** 에 대해 알아보자
 
 ### Cursor Download
 
@@ -336,16 +336,16 @@ Claude Code는 계층별로 설정 파일을 두고 권한 레벨을 제어할 �
 ## Network 설정
 
 [그림: Network 설정]
-- **HTTP Compatibility Mode**: HTTP/2는 낮은 지연 시간 스트리밍을 위해 권장됩니다. 일부 기업 프록시 및 VPN 환경에서는 호환 모드를 낮춰야 할 수 있습니다.
+- **HTTP Compatibility Mode** : HTTP/2는 낮은 지연 시간 스트리밍을 위해 권장됩니다. 일부 기업 프록시 및 VPN 환경에서는 호환 모드를 낮춰야 할 수 있습니다.
 
 ## Cursor Rules
 
-- **User Rules**: ID에 종속되어 전역으로 동작
-- **Project Rules**: Project별로 동작
+- **User Rules** : ID에 종속되어 전역으로 동작
+- **Project Rules** : Project별로 동작
 
 ## MCP(Model Context Protocol)란?
 
-2024년 11월, Anthropc의 엔지니어들이 발표한 규약입니다. **MCP**는 AI모델이 외부 데이터/도구와 쉽게 상호작용할 수 있도록 표준화된 연결방식을 제공하는 오픈 프로토콜입니다.
+2024년 11월, Anthropc의 엔지니어들이 발표한 규약입니다. **MCP** 는 AI모델이 외부 데이터/도구와 쉽게 상호작용할 수 있도록 표준화된 연결방식을 제공하는 오픈 프로토콜입니다.
 
 ## MCP 기본 구조
 
@@ -355,7 +355,7 @@ Claude Code는 계층별로 설정 파일을 두고 권한 레벨을 제어할 �
 ## Tools & Integrations
 
 [그림: Tools & Integrations]
-- **MCP Tools**: 다양한 MCP 서버와의 통합을 지원합니다.
+- **MCP Tools** : 다양한 MCP 서버와의 통합을 지원합니다.
 
 ## 정리
 
@@ -375,7 +375,7 @@ Claude Code는 계층별로 설정 파일을 두고 권한 레벨을 제어할 �
 ```markdown
 # Rule은 전체 지시사항의 일부
 
-사용자 입력 프롬프트와 **Rules**를 전부 결합해서 하나의 **Instruction**(지시사항)을 만든다.
+사용자 입력 프롬프트와 **Rules** 를 전부 결합해서 하나의 **Instruction** (지시사항)을 만든다.
 
 [그림: Instruction 구성 요소]
 - User Prompt
@@ -384,7 +384,7 @@ Claude Code는 계층별로 설정 파일을 두고 권한 레벨을 제어할 �
 
 ## Instruction의 구성
 
-**Instruction**은 반복적인 요청사항과 신규 요청사항으로 나뉜다.
+**Instruction** 은 반복적인 요청사항과 신규 요청사항으로 나뉜다.
 
 [그림: Instruction의 흐름]
 - User Prompt
@@ -394,7 +394,7 @@ Claude Code는 계층별로 설정 파일을 두고 권한 레벨을 제어할 �
 
 ## Cursor Agent의 규칙
 
-**Cursor Agent**가 '항상' 지켜야 하는 규칙은 **반복 Prompt**이다.
+**Cursor Agent** 가 '항상' 지켜야 하는 규칙은 **반복 Prompt** 이다.
 
 ### 반복 Prompt의 구성 요소
 - 프로젝트 목표
@@ -450,7 +450,7 @@ Claude Code는 계층별로 설정 파일을 두고 권한 레벨을 제어할 �
 
 # MCP 기본 구조
 
-MCP는 USB 규격과 같이 각종 도구들이 **host**들과 연결할 수 있도록 합니다.
+MCP는 USB 규격과 같이 각종 도구들이 **host** 들과 연결할 수 있도록 합니다.
 
 [그림: MCP 아키텍처]
 MCP는 다양한 클라이언트와 서버가 연결되어 있으며, 각종 도구와 호스트 간의 연결을 지원합니다.
@@ -474,11 +474,11 @@ MCP 클라이언트는 다양한 도구와의 통합을 지원하며, 설정을 
 ## Remote MCP Server
 
 ### Anthropic MCP Connector
-- **주요 기능**: MCP 클라이언트를 구현하여 직접 MCP 서버에 연결
-- **제한 사항**: 서버는 HTTP를 통해 통신하며, OAuth 인증을 지원
+- **주요 기능** : MCP 클라이언트를 구현하여 직접 MCP 서버에 연결
+- **제한 사항** : 서버는 HTTP를 통해 통신하며, OAuth 인증을 지원
 
 ### Linear Remote MCP
-- **기능**: 다양한 도구와의 통합을 통해 MCP 서버와의 연결을 지원
+- **기능** : 다양한 도구와의 통합을 통해 MCP 서버와의 연결을 지원
 
 ## Local MCP Server
 
@@ -486,10 +486,10 @@ Local MCP 서버는 다양한 기능을 제공하며, 사용자 정의 설정을
 
 ## Instruction(지시사항) + Tool (MCP)
 
-- **System Prompt**: 시스템 지시사항
-- **User Rules**: 사용자 규칙
-- **User Prompt**: 사용자 입력
-- **Project Rules**: 프로젝트 규칙
+- **System Prompt** : 시스템 지시사항
+- **User Rules** : 사용자 규칙
+- **User Prompt** : 사용자 입력
+- **Project Rules** : 프로젝트 규칙
 
 
 ## 요구사항을 바탕으로 Cursor 환경 구성하기

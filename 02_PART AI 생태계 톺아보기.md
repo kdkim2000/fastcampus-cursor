@@ -26,11 +26,11 @@ Github Copilot은 LLM기반의 코드 생성을 최초로 지원했다.
 ## 코드 에이전트(Code Agent)의 등장
 
 [그림: 코드 에이전트의 구조]
-- **Human**: 사용자 입력
-- **LLM Call**: 대규모 언어 모델 호출
-- **Environment**: 실행 환경
-- **Action**과 **Feedback**: 상호작용 과정
-- **Stop**: 프로세스 중단
+- **Human** : 사용자 입력
+- **LLM Call** : 대규모 언어 모델 호출
+- **Environment** : 실행 환경
+- **Action** 과 **Feedback** : 상호작용 과정
+- **Stop** : 프로세스 중단
 
 ## Cursor Agent & MCP 지원
 
@@ -52,10 +52,10 @@ Claude를 만든 Anthropic은 코드의 90%를 Agent를 통해 개발한다.
 
 ## Chat에서 Agent로
 
-1. 나만의 **Workflow**를 분석
-2. **Instruction**으로 보상체계를 설정
-3. Context에 필요한 **정보(데이터, 문서 등)**를 전달
-4. Workflow를 바탕으로 **Context**를 설계
+1. 나만의 **Workflow** 를 분석
+2. **Instruction** 으로 보상체계를 설정
+3. Context에 필요한 **정보(데이터, 문서 등)** 를 전달
+4. Workflow를 바탕으로 **Context** 를 설계
 
 ## 정리
 
@@ -77,7 +77,7 @@ Claude / Cursor / V0 / CodeRabbit
 
 ## Claude
 
-**Claude**는 Anthropic에서 만든 AI 모델로, Chat UI 형태의 서비스를 제공합니다. 이 모델은 **Coding**에 특히 강점이 있으며, Opus, Sonnet, Haiku 세 가지 모델을 제공합니다.
+**Claude** 는 Anthropic에서 만든 AI 모델로, Chat UI 형태의 서비스를 제공합니다. 이 모델은 **Coding** 에 특히 강점이 있으며, Opus, Sonnet, Haiku 세 가지 모델을 제공합니다.
 
 ### Claude 모델
 
@@ -89,39 +89,39 @@ Claude / Cursor / V0 / CodeRabbit
 
 ## Claude Desktop (Web)
 
-**Claude Desktop**은 Claude Haiku, Sonnet, Opus 모델을 활용하여 AI와 협업할 수 있는 도구입니다. Deep Research, Web 검색, Artifact, MCP를 제공합니다.
+**Claude Desktop** 은 Claude Haiku, Sonnet, Opus 모델을 활용하여 AI와 협업할 수 있는 도구입니다. Deep Research, Web 검색, Artifact, MCP를 제공합니다.
 
 ## Claude Code
 
-**Claude Code**는 Anthropic이 자체 서비스를 개발하기 위해 사내에서 개발한 프로젝트입니다. Project의 문맥을 파악하고, Code를 읽고 작성하는 능력이 탁월합니다.
+**Claude Code** 는 Anthropic이 자체 서비스를 개발하기 위해 사내에서 개발한 프로젝트입니다. Project의 문맥을 파악하고, Code를 읽고 작성하는 능력이 탁월합니다.
 
 ## Cursor
 
-**Cursor**는 anysphere라는 회사에서 만든 AI 기반 Coding IDE입니다. VS Code 기반으로 제작되어 친숙한 UI/UX를 제공합니다.
+**Cursor** 는 anysphere라는 회사에서 만든 AI 기반 Coding IDE입니다. VS Code 기반으로 제작되어 친숙한 UI/UX를 제공합니다.
 
 ### Tab / Agent / Inline Edit
 
-- **Tab**: 문맥을 파악하여 Cursor 위치에 맞는 Code를 추천합니다.
-- **Agent**: Codebase를 탐색하고 Tool을 호출하며, Rules를 기반으로 사용자의 의도에 맞는 소스코드를 만듭니다.
-- **Inline Edit**: 특정 Code Block에 사용자의 의도에 맞는 요청사항을 실시간으로 반영합니다.
+- **Tab** : 문맥을 파악하여 Cursor 위치에 맞는 Code를 추천합니다.
+- **Agent** : Codebase를 탐색하고 Tool을 호출하며, Rules를 기반으로 사용자의 의도에 맞는 소스코드를 만듭니다.
+- **Inline Edit** : 특정 Code Block에 사용자의 의도에 맞는 요청사항을 실시간으로 반영합니다.
 
 ## V0
 
-**V0**는 Next.js를 만드는 Vercel에서 개발하는 React.js 기반의 프론트엔드 자동화 도구입니다.
+**V0** 는 Next.js를 만드는 Vercel에서 개발하는 React.js 기반의 프론트엔드 자동화 도구입니다.
 
 ### Code / Design Mode
 
-- **Code Mode**: React 기반의 Code를 생성해주며, 오른쪽 패널에서 실시간으로 생성된 화면을 보여줍니다.
-- **Design Mode**: 해당 Component를 선택하고 Context에 주입하여 자연어로 수정 요청할 수 있습니다.
+- **Code Mode** : React 기반의 Code를 생성해주며, 오른쪽 패널에서 실시간으로 생성된 화면을 보여줍니다.
+- **Design Mode** : 해당 Component를 선택하고 Context에 주입하여 자연어로 수정 요청할 수 있습니다.
 
 ## CodeRabbit
 
-**CodeRabbit**은 Github/Gitlab에서 올라온 Pull Request에 대해 CodeRabbit Agent가 맥락을 파악해서 개선점을 도출합니다.
+**CodeRabbit** 은 Github/Gitlab에서 올라온 Pull Request에 대해 CodeRabbit Agent가 맥락을 파악해서 개선점을 도출합니다.
 
 
 ## IDE 기반 Code Review
 
-IDE 기반으로 무료로 **Code Review Plugin**을 제공합니다.  
+IDE 기반으로 무료로 **Code Review Plugin** 을 제공합니다.  
 VS Code 기반의 Extension으로 설치할 수 있으며, 리뷰 결과는 영어로 제공됩니다.
 
 ## 정리
@@ -171,7 +171,7 @@ Context Window는 200K tokens로 제한되며, 입력과 출력의 흐름을 보
 
 ## AI를 신입사원이라고 생각해보자
 
-**특징**: 기억력에 제한이 있음
+**특징** : 기억력에 제한이 있음
 
 - 어떤 자료를 보면 될까요?
 - 인프라 설정부터 보면 되나요?
@@ -198,8 +198,8 @@ Context Window는 200K tokens로 제한되며, 입력과 출력의 흐름을 보
 
 #### Select 전략의 좋은 예시
 
-- **Bad**: "우리 서비스에 소셜 로그인 기능 추가해줘." (AI는 우리 서비스를 모릅니다)
-- **Good**: "첨부한 `authController.js` 파일에 `googleLogin` 함수를 추가해줘"
+- **Bad** : "우리 서비스에 소셜 로그인 기능 추가해줘." (AI는 우리 서비스를 모릅니다)
+- **Good** : "첨부한 `authController.js` 파일에 `googleLogin` 함수를 추가해줘"
 
 ### Isolation (격리)
 
@@ -240,7 +240,7 @@ Claude Code도 자동으로 압축을 진행한다.
     When you are using compact, please focus on test output and code changes.
     ```
 
-- **구체적인 쿼리 작성**: 불필요한 스펙을 압박하는 모호한 요청 피하기
+- **구체적인 쿼리 작성** : 불필요한 스펙을 압박하는 모호한 요청 피하기
 
 ## AI를 멘토링하는 과정
 
@@ -272,8 +272,8 @@ Claude Code도 자동으로 압축을 진행한다.
 
 ## AI와의 관계 설정하기
 
-- **협업(Collaboration)**: AWS에 CI/CD 구축하는 방법 알려줄래?
-- **위임(Delegation)**: 구글, 네이버 로그인 기능 구현해줘
+- **협업(Collaboration)** : AWS에 CI/CD 구축하는 방법 알려줄래?
+- **위임(Delegation)** : 구글, 네이버 로그인 기능 구현해줘
 
 
 ## 협업 (Collaboration)
@@ -288,7 +288,7 @@ Claude Code도 자동으로 압축을 진행한다.
 
 ### 01 요구사항 분석
 
-**협업**으로 시작:
+**협업** 으로 시작:
 - JWT vs 세션 기반 중 어떤 게 좋을까?
 - 소셜 로그인은 어디까지 지원해야 할까?
 - 2FA는 필수인가?
@@ -304,18 +304,18 @@ Claude Code도 자동으로 압축을 진행한다.
 
 ### 03 코드 리뷰 및 개선
 
-**다시 협업**으로:
+**다시 협업** 으로:
 - 전체적으로 좋은데, 이 부분에서 토큰 만료 처리가 좀 부족한 것 같고, 패스워드 암호화 강도를 더 높일 수 있을까?
 
 위임된 결과물을 바탕으로, 더 나은 품질을 위해 함께 '협업'하며 다듬는 과정.
 
 ## 실제 개발에서의 현실적 워크플로우
 
-1. **협업**: 문제 정의와 설계
-2. **협업**: Task 분리 및 역할 분배
-3. **위임**: Task 개발 계획 수립
-4. **위임**: 계획에 맞게 소스코드 작성
-5. **협업**: AI가 완성한 코드 검토 및 피드백
+1. **협업** : 문제 정의와 설계
+2. **협업** : Task 분리 및 역할 분배
+3. **위임** : Task 개발 계획 수립
+4. **위임** : 계획에 맞게 소스코드 작성
+5. **협업** : AI가 완성한 코드 검토 및 피드백
 
 ## [협업] 문제 정의와 설계
 
@@ -390,15 +390,15 @@ AI가 작성한 코드를 확인하고, 내 의도에 부합하는지 검토합�
 
 ## AI와 협업(Collaboration)을 해야합니다
 
-- AI와 함께 일하며 **개인의 역량**을 증강
+- AI와 함께 일하며 **개인의 역량** 을 증강
 - 습득된 지식과 내 지식을 결합하는 과정을 통해 원하는 형태의 정보를 도출
-- **사고의 확장**으로 집단지성(AI)을 통한 개인의 사고력 향상
+- **사고의 확장** 으로 집단지성(AI)을 통한 개인의 사고력 향상
 
 ## AI에게 위임(Delicate)을 해야합니다
 
-- 반복된 자동화 위임을 통해 **생산성**을 극대화
+- 반복된 자동화 위임을 통해 **생산성** 을 극대화
 - 기존에 개인의 WorkFlow의 일부를 AI가 처리하며, **병렬적인 업무처리**
-- 개발자는 위임한 이후 결과에 대해 **검토하고 피드백**하는 과정을 거침
+- 개발자는 위임한 이후 결과에 대해 **검토하고 피드백** 하는 과정을 거침
 
 ## 정리
 
@@ -419,7 +419,7 @@ AI가 작성한 코드를 확인하고, 내 의도에 부합하는지 검토합�
 
 "에이전트는 당신을 대신해서 독립적으로 작업을 수행하는 시스템입니다"
 
-- **LLM**을 활용하여 워크플로우 실행을 관리하고 결정을 내림
+- **LLM** 을 활용하여 워크플로우 실행을 관리하고 결정을 내림
 - 다양한 도구에 접근하여 외부 시스템과 상호작용하며, 현재 워크플로우 상태에 따라 적절한 도구를 동적으로 선택
 
 
@@ -434,7 +434,7 @@ AI가 작성한 코드를 확인하고, 내 의도에 부합하는지 검토합�
 
 ## Claude Code
 
-Anthropic이 사내에서 사용하기 위한 **Agent Coding Tool**로, 문맥을 파악하고, 계획을 수립하며, 코드를 생성하는데 가장 탁월한 서비스입니다.
+Anthropic이 사내에서 사용하기 위한 **Agent Coding Tool** 로, 문맥을 파악하고, 계획을 수립하며, 코드를 생성하는데 가장 탁월한 서비스입니다.
 
 ### Claude Code 동작 과정
 
@@ -452,7 +452,7 @@ Anthropic이 사내에서 사용하기 위한 **Agent Coding Tool**로, 문맥�
 
 ## 협업에서 위임으로
 
-- **협업**에서 **위임**으로의 전환
+- **협업** 에서 **위임** 으로의 전환
   - Assistant → Agent
   - Prompt Engineering → Context Engineering
 
@@ -496,7 +496,7 @@ Anthropic이 사내에서 사용하기 위한 **Agent Coding Tool**로, 문맥�
 ## AI에게 어떻게 맥락을 전달할 수 있을까?
 
 [그림: Context Engineering]
-- **Context**는 여러 요소로 구성됩니다:
+- **Context** 는 여러 요소로 구성됩니다:
   - **Instructions / System Prompt**
   - **Long-Term Memory**
   - **State / History (Short-term Memory)**
